@@ -4,6 +4,10 @@ from string import ascii_letters
 # create list with separated words from text
 def reverse_words(text):
 
+    # raise an Error if input type is not a string, else continue
+    if not isinstance(text, str):
+        raise TypeError("Input must be a string")
+
     # create list with separated words from text
     separate_words = text.split()
 
@@ -32,11 +36,3 @@ def reverse_words(text):
     return " ".join(reversed_words)
 
 
-if __name__ == '__main__':
-    cases = [
-            ("abcd efgh", "dcba hgfe"),
-            ("a1bcd efg!h", "d1cba hgf!e"),
-            ("", ""),
-        ]
-    for text, reversed_text in cases:
-        assert reverse_words(text) == reversed_text
