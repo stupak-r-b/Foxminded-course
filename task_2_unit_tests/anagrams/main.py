@@ -21,9 +21,7 @@ def reverse_words(text: str):
         # if word has a non-letter symbol
         else:
             for symbol in word:
-                if symbol in ascii_letters:
-                    pass
-                else:
+                if symbol not in ascii_letters:
                     # save an index of a non-letter symbol
                     symbol_index = word.index(symbol)
                     # reversed word without a non-letter symbol
