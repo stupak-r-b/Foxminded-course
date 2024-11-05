@@ -27,7 +27,7 @@ def reverse_words(text: str):
                     # reversed word without a non-letter symbol
                     reversed_word = "".join(symbol for symbol in word[::-1] if symbol in ascii_letters)
                     # assemble a new reversed work with non-letter symbol that staying in place.
-                    new_reversed_word = reversed_word[:symbol_index] + symbol + reversed_word[symbol_index:]
+                    new_reversed_word = f"{reversed_word[:symbol_index]}{symbol}{reversed_word[symbol_index:]}"
                     # add reversed word in to a list
                     reversed_words.append(new_reversed_word)
     # return reversed and assembled text
