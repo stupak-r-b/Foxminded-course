@@ -2,7 +2,7 @@ from string import ascii_letters
 
 
 # create list with separated words from text
-def reverse_words(text):
+def reverse_words(text: str):
 
     # raise an Error if input type is not a string, else continue
     if not isinstance(text, str):
