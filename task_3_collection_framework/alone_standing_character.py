@@ -24,7 +24,6 @@ def one_char_counter(text: str):
     data_base[text] = single_char_counter
     return data_base[text]
 
-print(one_char_counter(3))
 
 
 
