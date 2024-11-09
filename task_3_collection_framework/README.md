@@ -1,15 +1,15 @@
-Task 2 - Unit tests
+Task 3 - Collection Framework
 
-Write tests to the previous task using Unittest
+    Write an application that takes a string and returns the number of characters in the string occurring only once. 
+    It is expected that a string with the same character sequence may be passed several times to the method. 
+    Since the counting operation can be time-consuming, the method should cache the results, so that when the method 
+    is given a string previously encountered, it will simply retrieve the stored result.
 
-    - All tests should be in tests folder.
+    Use the "collections" package and map functions where appropriate. 
+    Write tests using py.test.
 
-    - Code should be covered by tests over 80 percent. 
-      For measuring code coverage use package these https://coverage.readthedocs.io/en/coverage-5.1/
+    E.g
+    "abbbccdf" => 3
+    a, d, f are presented once.
 
-    - Your tests should also check for other cases, for example, what happens if a number is passed to your function. 
-      You should modify your function for atypical behaviors. 
-
-    - Your test should have two test cases. The first test case should check typical 
-      behavior(you can add parametrize for that test case). The second test case should check atypical behavior.
-
+    your_func_name('abbbccdf') == 3
