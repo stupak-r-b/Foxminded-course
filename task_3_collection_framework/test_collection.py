@@ -17,3 +17,7 @@ class TestCharCounter(unittest.TestCase):
         with self.assertRaises(TypeError):   # Checking if passing a None raises a TypeError
             one_char_counter(None)
 
+
+
+if __name__ == "__main__":
+    unittest.main()
