@@ -1,7 +1,7 @@
 import argparse
 
 # Imported function "one_char_counter" to count characters that don't repeat in the text
-from alone_standing_character import one_char_counter
+from .alone_standing_character import one_char_counter
 
 # Function that reads file with data
 def file_reading(path: str):
@@ -39,15 +39,15 @@ def command_line_interface():
 
     # If user used only --string command returns amount of characters that don't repeat
     if args.string and not args.file:
-        return one_char_counter(args.string)
+        return print(one_char_counter(args.string))
 
     # If user used --string and --file command returns only amount of characters from the file that don't repeat
     elif args.string and args.file:
-        return one_char_counter(content)
+        return print(one_char_counter(content))
 
     # If user used only --file command returns amount of characters from the file that don't repeat
     elif args.file and not args.string:
-        return one_char_counter(content)
+        return print(one_char_counter(content))
 
 if __name__ == "__main__":
     command_line_interface()

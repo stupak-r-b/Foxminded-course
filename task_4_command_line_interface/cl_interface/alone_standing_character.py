@@ -23,4 +23,3 @@ def one_char_counter(text: str):
     # Add a new text that user provide for the first time in to a dictionary
     data_base[text] = single_char_counter
     return data_base[text]
-
