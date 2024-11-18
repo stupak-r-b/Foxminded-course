@@ -1,6 +1,6 @@
 from alone_standing_character import one_char_counter
 
-
+# Testing passing cases
 def test_one_char_counter():
 
     """Does this function return the right amount of characters that don't repeat?"""
