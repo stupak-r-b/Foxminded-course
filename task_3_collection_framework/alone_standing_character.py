@@ -23,6 +23,8 @@ def one_char_counter(text: str) -> int:
     shelf[text] = len(single_char_counter)
     return shelf[text]
 
+print(one_char_counter("How are you buddy?"))
+
 
 
 
