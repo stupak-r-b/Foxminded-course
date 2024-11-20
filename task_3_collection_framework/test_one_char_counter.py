@@ -1,10 +1,13 @@
 from alone_standing_character import one_char_counter
+import pytest
 
-# Testing passing cases
-def test_one_char_counter():
+# Parametrize testing  with decorator
+@pytest.mark.parametrize("a, expected", [
+    ("How are you buddy?", 7),
+    ("abbbccdf", 3),
+    ("", 0)
+])
+def test_one_char_counter(a, expected):
 
     """Does this function return the right amount of characters that don't repeat?"""
-    assert one_char_counter("How are you buddy?") == 7
-    assert one_char_counter("abbbccdf") == 3
-    assert one_char_counter("") == 0
-
+    assert one_char_counter(a) == expected
