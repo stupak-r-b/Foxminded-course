@@ -1,8 +1,8 @@
-from functools import lru_cache
+from functools import cache
 from collections import Counter
 
-# by using @lru_cache decorator we will improve function runtime by caching input and output
-@lru_cache(maxsize=100)
+# by using @cache decorator we will improve function runtime by caching input and output
+@cache
 def one_char_counter(text: str) -> int:
 
     # Raise an Error if input type is not a string, else continue
