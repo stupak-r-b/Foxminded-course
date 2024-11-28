@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, mock_open
-from cl_interface.command_line_interface import file_reading
+from command_line_interface import file_reading
 
 class TestCommandLineInterface(unittest.TestCase):
 

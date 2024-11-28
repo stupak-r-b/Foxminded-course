@@ -1,7 +1,7 @@
 import argparse
 
 # Imported function "one_char_counter" to count characters that don't repeat in the text
-from .alone_standing_character import one_char_counter
+from alone_standing_character import one_char_counter
 
 # Function that reads file with data
 def file_reading(path: str):
