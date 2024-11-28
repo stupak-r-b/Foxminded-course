@@ -1,4 +1,4 @@
-from functools import cache, lru_cache
+from functools import cache
 from collections import Counter
 
 # my cache decorator with input type checking
