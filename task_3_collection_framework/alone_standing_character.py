@@ -1,8 +1,21 @@
-from functools import cache
+from functools import cache, lru_cache
 from collections import Counter
 
-# by using @cache decorator we will improve function runtime by caching input and output
-@cache
+# my cache decorator with input type checking
+def my_cache(func):
+
+    #Checking if the input is a function
+    if not callable(func):
+        raise TypeError("Input must be a function")
+
+    # Cache the function with @cache decorator
+    @cache
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs)
+    return wrapper
+
+
+@my_cache
 def one_char_counter(text: str) -> int:
 
     # Raise an Error if input type is not a string, else continue
@@ -17,4 +30,3 @@ def one_char_counter(text: str) -> int:
 
     # return amount of characters in the lis as a result
     return len(single_char_counter)
-
