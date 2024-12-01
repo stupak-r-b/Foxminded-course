@@ -12,9 +12,9 @@ def file_reading(path: str):
             with open(path, 'r') as file:
                 return file.read()
 
-    # If there's no such a file rise an ERROR
+    # If there's no such a file rise an ERROR and terminate the program
     except FileNotFoundError:
-        return print("The file does not exist.")
+        raise SystemExit("The file does not exist.")
 
 # Function that creates a command line interface
 def command_line_interface():
