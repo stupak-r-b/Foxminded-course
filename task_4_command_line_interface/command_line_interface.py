@@ -4,7 +4,7 @@ import argparse
 from alone_standing_character import one_char_counter
 
 # Function that reads file with data
-def file_reading(path: str):
+def file_reading(path: str) -> str:
 
     # Try to open a file with data provided by useer
     try:
